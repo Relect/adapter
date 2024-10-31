@@ -27,7 +27,7 @@ import java.util.Date;
 public class AppController {
 
     private final Meteo meteo;
-    private final String EXAMPLE_URL_B = "localhost:8185/to_b";
+    private final String EXAMPLE_URL_B = "http://localhost:8185/to_b";
 
     @PostMapping(value = "/from_a", consumes = "application/json",
             produces = "application/json")
@@ -66,10 +66,8 @@ public class AppController {
                 .header("Accept", "application/json")
                 .build();
 
-        try {
-            client.send(request, HttpResponse.BodyHandlers.ofString());
-        } catch (IOException | InterruptedException e) {
-            throw new RuntimeException(e);
-        }
+
+        //    client.send(request, HttpResponse.BodyHandlers.ofString());
+
     }
 }

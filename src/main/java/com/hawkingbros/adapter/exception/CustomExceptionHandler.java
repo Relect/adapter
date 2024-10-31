@@ -13,6 +13,7 @@ public class CustomExceptionHandler extends ResponseEntityExceptionHandler {
 
     @ExceptionHandler(MsgException.class)
     public ResponseEntity<Object> handleException(MsgException ex, WebRequest request) {
+        System.out.println(ex.getMessage());
         return handleExceptionInternal(ex, null, new HttpHeaders(),
                 HttpStatus.BAD_REQUEST, request);
     }
