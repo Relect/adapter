@@ -13,6 +13,7 @@
 	<version>0.0.1</version>
 	<name>adapter</name>
 	<description>demo adapter</description>
+	<packaging>jar</packaging>
 
 	<properties>
 		<java.version>17</java.version>
@@ -46,14 +47,14 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
-				<!-- <configuration>
+				<configuration>
 					<excludes>
 						<exclude>
 							<groupId>org.projectlombok</groupId>
 							<artifactId>lombok</artifactId>
 						</exclude>
 					</excludes>
-				</configuration> -->
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>
